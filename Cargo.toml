@@ -1,0 +1,14 @@
+[package]
+edition = "2021"
+name = "compare-inlining"
+version = "0.1.0"
+
+[dependencies]
+futures = "0.3"
+
+[profile.release]
+opt-level = "z"
+
+[patch.crates-io]
+pin-project-lite = { git = "https://github.com/taiki-e/pin-project-lite.git" }
+# pin-project-lite = { git = "https://github.com/EFanZh/pin-project-lite.git", branch = "inline-project-methods" }
